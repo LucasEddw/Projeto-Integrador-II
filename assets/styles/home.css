@@ -1,0 +1,10 @@
+#about-right #content .content-title {
+  color: var(--azul-medio);
+  font-size: 24px;
+  font-weight: 600;
+}
+#about-right #content .content-text {
+  color: var(--fonte-escura);
+  font-size: 16px;
+  font-weight: 400;
+}/*# sourceMappingURL=home.css.map */
