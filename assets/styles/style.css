@@ -5,14 +5,22 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", "sans-serif";
+    padding: 0;
+    text-decoration: none;
 }
 
 :root {
     --pagina-branca: #fefefe;
     --azul-claro: #3990c0;
     --azul-medio: #205295;
+    --azul-medio-5p: rgb(32, 82, 149, 0.05);
+    --azul-medio-15p: rgb(32, 82, 149, 0.15);
+    --azul-medio-20p: rgb(32, 82, 149, 0.2);
     --azul-escuro: #144272;
-    --fonte-escura: #525252;
+    --texto: #525252;
+    --texto-escuro: #1e1e1e;
+    --footer-bg: #081425;
+    --footer-bottom-bg: #060e1a;
 }
 
 body {
@@ -24,6 +32,7 @@ body {
     color: var(--azul-medio);
     font-size: 40px;
     font-weight: 600;
+    line-height: 30px;
 }
 .texto-medio-azul {
     color: var(--azul-medio);
@@ -39,4 +48,8 @@ body {
     color: var(--azul-medio);
     font-size: 24px;
     font-weight: 600;
+}
+
+.divider {
+    border: 1.5px solid var(--azul-medio-20p);
 }
