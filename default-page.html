@@ -37,7 +37,7 @@
     <section class="default-page" id="atividades">
 
         <div class="default-page-main-section">
-            <h1 class="page-title texto-grande-azul">Quadrinhos | Anima - INOS</h1>
+            <h1 class="page-title texto-grande-azul">Atividades | Anima - INOS</h1>
             <div id="atividades-content-box">
                 <article class="atividades-content">
                 </article>
@@ -111,23 +111,24 @@
             }
         }
 
-        // multiplyBlogCard()
-        // window.addEventListener('scroll', () => {
-        //     let search_box_content = document.querySelector('div.search-box');
-        //     let search_box = document.querySelector('div.default-page-search-box');
-        //     if (window.scrollY > 105) {
-        //         search_box_content.style.position = 'fixed';
-        //         if (window.scrollY > 2735) {
-        //             search_box_content.style.position = 'static';
-        //             search_box.style.alignItems = 'end';
-        //         }
-        //     }
+        multiplyBlogCard()
+        
+        window.addEventListener('scroll', () => {
+            let search_box_content = document.querySelector('div.search-box');
+            let search_box = document.querySelector('div.default-page-search-box');
+            if (window.scrollY > 105) {
+                search_box_content.style.position = 'fixed';
+                if (window.scrollY > 2735) {
+                    search_box_content.style.position = 'static';
+                    search_box.style.alignItems = 'end';
+                }
+            }
 
-        //     else {
-        //         search_box_content.style.position = 'static';
-        //         search_box.style.alignItems = 'start';
-        //     }
-        // })
+            else {
+                search_box_content.style.position = 'static';
+                search_box.style.alignItems = 'start';
+            }
+        })
     </script>
 
     <!-- #endregion SCRIPT-->

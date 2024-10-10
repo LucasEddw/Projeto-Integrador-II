@@ -8,62 +8,28 @@
   position: relative;
 }
 #banner #static-nav-bar {
+  z-index: 0;
+  top: 0;
+  transition: none;
+  background: transparent;
+  box-shadow: none;
   position: absolute;
-  top: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0);
-  height: 116px;
-  width: 100%;
-  padding: 0 76px;
 }
 #banner #static-nav-bar #static-nav-bar-icon a {
   color: white;
-  font-size: 24px;
-  font-weight: 900;
-  text-decoration: none;
-}
-#banner #static-nav-bar #static-nav-bar-box {
-  list-style: none;
-  position: absolute;
-  transform: translateX(calc(50vw - 76px - 50%));
-  display: flex;
-  gap: 46px;
 }
 #banner #static-nav-bar #static-nav-bar-box #static-nav-bar-links a {
-  text-decoration: none;
   color: white;
-  font-size: 20px;
   font-weight: 300;
 }
-#banner #static-nav-bar #static-nav-bar-profile-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 29px;
+#banner #static-nav-bar #static-nav-bar-box #static-nav-bar-links a::before {
+  background: white !important;
 }
 #banner #static-nav-bar #static-nav-bar-profile-box i {
   color: white;
-  height: 40px;
-  width: 40px;
-  position: relative;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-}
-#banner #static-nav-bar #static-nav-bar-profile-box i#static-nav-bar-notification::before {
-  font-size: 25px;
-  position: absolute;
 }
 #banner #static-nav-bar #static-nav-bar-profile-box i#static-nav-bar-profile {
-  border: 3px solid white;
-  border-radius: 50%;
-}
-#banner #static-nav-bar #static-nav-bar-profile-box i#static-nav-bar-profile::before {
-  margin-top: 10px;
-  font-size: 30px;
-  position: absolute;
+  border-color: white;
 }
 #banner #banner-box {
   text-align: center;
@@ -204,26 +170,33 @@
   flex-direction: column;
   width: 547px;
 }
-#blog #blog-box .blog-card:nth-child(2) .blog-card-thumbnail {
-  background: linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.8) 80%), url("../img/webtoon-banner.jpg") no-repeat center/cover;
-}
-#blog #blog-box .blog-card:nth-child(3) .blog-card-thumbnail {
-  background: linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.8) 80%), url("../img/webtoon-banner2.png") no-repeat center/cover;
-}
-#blog #blog-box .blog-card .blog-card-thumbnail {
+#blog #blog-box .blog-card a .blog-card-thumbnail {
   width: 547px;
   height: 305px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  transition: all 0.3s !important;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 80%);
+  transition: all 0.3s;
+  overflow: hidden;
 }
-#blog #blog-box .blog-card .blog-card-thumbnail:hover {
+#blog #blog-box .blog-card a .blog-card-thumbnail .blog-card-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+  background: #ccc;
+}
+#blog #blog-box .blog-card a .blog-card-thumbnail:hover {
   cursor: pointer;
-  background-size: 110%;
-  transition: all 0.3s !important;
 }
-#blog #blog-box .blog-card .blog-card-thumbnail .blog-card-thumbnail-box {
+#blog #blog-box .blog-card a .blog-card-thumbnail:hover .blog-card-thumbnail-img {
+  transition: all 0.3s;
+  scale: 1.1;
+}
+#blog #blog-box .blog-card a .blog-card-thumbnail .blog-card-thumbnail-box {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -231,25 +204,25 @@
   color: white;
   padding: 0 20px;
 }
-#blog #blog-box .blog-card .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-title {
+#blog #blog-box .blog-card a .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-title {
   width: 100%;
   font-weight: 600;
   font-size: 32px;
   padding-bottom: 18px;
   line-height: 33px;
 }
-#blog #blog-box .blog-card .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-data {
+#blog #blog-box .blog-card a .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-data {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-#blog #blog-box .blog-card .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-data .blog-card-data-day {
+#blog #blog-box .blog-card a .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-data .blog-card-data-day {
   font-weight: 600;
   font-size: 32px;
   margin-bottom: -6px;
 }
-#blog #blog-box .blog-card .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-data .blog-card-data-month {
+#blog #blog-box .blog-card a .blog-card-thumbnail .blog-card-thumbnail-box .blog-card-data .blog-card-data-month {
   font-weight: 500;
   font-size: 16px;
   padding-bottom: 13px;
@@ -336,12 +309,27 @@
   width: 355px;
 }
 #atividades #atividades-box .atividades-card .atividades-card-thumbnail {
+  position: relative;
   width: 355px;
   height: 225px;
-  background: #ccc;
   display: flex;
   justify-content: center;
   align-items: end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 80%);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+#atividades #atividades-box .atividades-card .atividades-card-thumbnail:hover .atividades-card-thumbnail-img {
+  scale: 1.1;
+  transition: all 0.3s;
+}
+#atividades #atividades-box .atividades-card .atividades-card-thumbnail .atividades-card-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+  background: #ccc;
 }
 #atividades #atividades-box .atividades-card .atividades-card-thumbnail .atividades-card-title {
   padding: 0 20px 15px 20px;
@@ -367,16 +355,34 @@
   flex-direction: column;
   gap: 35px;
   min-height: 627px;
+  padding: 100px 0;
+}
+#quadrinhos #quadrinhos-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
 }
 #quadrinhos #quadrinhos-box .quadrinhos-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#quadrinhos #quadrinhos-box .quadrinhos-card .quadrinhos-card-img {
-  min-height: 311px;
-  width: 259px;
+#quadrinhos #quadrinhos-box .quadrinhos-card .quadrinhos-card-img-box {
+  display: flex;
   background: var(--azul-medio-15p);
+  overflow: hidden;
+}
+#quadrinhos #quadrinhos-box .quadrinhos-card .quadrinhos-card-img-box:hover .quadrinhos-card-img {
+  transition: all 0.3s;
+  scale: 1.1;
+}
+#quadrinhos #quadrinhos-box .quadrinhos-card .quadrinhos-card-img-box .quadrinhos-card-img {
+  height: 311px;
+  width: 259px;
+  opacity: 0.95;
+  transition: all 0.3s;
 }
 #quadrinhos #quadrinhos-box .quadrinhos-card .quadrinhos-card-info {
   background: var(--azul-medio-5p);

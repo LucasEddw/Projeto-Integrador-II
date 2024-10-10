@@ -5,11 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anima - INOS</title>
+    <link rel="stylesheet" href="assets/styles/blog.css">
 </head>
 
-<body>
+<body class="adicionar-nav-bar">
 
-    <script src="assets/javascript/script.js"></script>
+    <nav id="static-nav-bar">
+
+        <div id="static-nav-bar-icon">
+
+            <a href="index.html">Anima - INOS</a>
+
+        </div>
+        <ul id="static-nav-bar-box">
+
+            <li id="static-nav-bar-links"><a href="blog.html">Blog</a></li>
+            <li id="static-nav-bar-links"><a href="atividades.html">Atividades</a></li>
+            <li id="static-nav-bar-links"><a href="quadrinhos.html">Quadrinhos</a></li>
+            <li id="static-nav-bar-links"><a href="sobre.html">Sobre</a></li>
+
+        </ul>
+        <div id="static-nav-bar-profile-box">
+
+            <i id="static-nav-bar-notification" class="fa-solid fa-bell"></i>
+            <i id="static-nav-bar-profile" class="fa-solid fa-user"></i>
+
+        </div>
+
+    </nav>
+
+    <section class="default-page" id="atividades">
+
+        <div class="default-page-main-section">
+            <h1 class="page-title texto-grande-azul">Atividades | Anima - INOS</h1>
+            <div id="atividades-content-box">
+                <article class="atividades-content">
+                </article>
+            </div>
+
+            <div class="navigation">
+                <h1 class="navigation-title">Navegar</h1>
+                <ul>
+                    <li>
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="default-page-search-box">
+            <div class="search-box">
+                <h1 class="search-title">Pequisar Conteúdo</h1>
+                <div class="search-content">
+                    <input placeholder="Pesquisar" type="search" name="search-bar" class="search-bar">
+                    <div class="search-content-recent">
+                        <h1>Postagens mais recentes</h1>
+                        <ul>
+                            <li><a href="#">História dos Mangás</a></li>
+                            <li><a href="#">Primeiro Anime</a></li>
+                            <li><a href="#">Webtoons</a></li>
+                            <li><a href="#">Light Novel</a></li>
+                        </ul>
+                        <h1>Últimas notícias</h1>
+                        <ul>
+                            <li><a href="#">História dos Mangás</a></li>
+                            <li><a href="#">Primeiro Anime</a></li>
+                            <li><a href="#">Webtoons</a></li>
+                            <li><a href="#">Light Novel</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+    <footer id="footer"></footer>
+
+    <div style="display: none;" class="repositorio"></div>
+
+    <!-- #region SCRIPT-->
+
+    <script src="assets/javascript/script.js">
+    </script>
+
+    <script>
+        function multiplyBlogCard() {
+            const blog_card = document.querySelector('article.atividades-content');
+            const blog_father = document.querySelector('div#atividades-content-box');
+            for (let i = 1; i <= 5; i++) {
+                let blog_card_copy = blog_card.cloneNode(true);
+                blog_card_copy.style.removeProperty('display');
+                blog_father.appendChild(blog_card_copy)
+            }
+        }
+
+        multiplyBlogCard()
+
+        // window.addEventListener('scroll', () => {
+        //     let search_box_content = document.querySelector('div.search-box');
+        //     let search_box = document.querySelector('div.default-page-search-box');
+        //     if (window.scrollY > 105) {
+        //         search_box_content.style.position = 'fixed';
+        //         if (window.scrollY > 2735) {
+        //             search_box_content.style.position = 'static';
+        //             search_box.style.alignItems = 'end';
+        //         }
+        //     }
+
+        //     else {
+        //         search_box_content.style.position = 'static';
+        //         search_box.style.alignItems = 'start';
+        //     }
+        // })
+        
+    </script>
+
+    <!-- #endregion SCRIPT-->
 
 </body>
 

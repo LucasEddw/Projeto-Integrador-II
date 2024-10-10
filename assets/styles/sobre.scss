@@ -1,0 +1,86 @@
+#sobre {
+    margin-bottom: 150px;
+
+    #sobre-box {
+
+        #text {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--texto);
+            text-align: justify;
+            margin: 15px 0;
+            letter-spacing: 0.5px;
+        }
+
+        #participantes-box {
+            margin: 60px 0 0 0;
+
+            #participantes-title {
+                margin-bottom: 50px;
+            }
+
+            #box-card {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 50px;
+                .card {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--azul-medio-5p);
+
+                    .card-pfp {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: linear-gradient(180deg, #ccc 80%, rgba(0, 0, 0, 0.8));
+                        overflow: hidden;
+                        width: 250px;
+                        height: 250px;
+
+                        img{
+                            height: 100%;
+                            opacity: 0.9;
+                        }
+                    }
+
+                    .card-info {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0 50px;
+                        flex-direction: column;
+                        width: 470px;
+
+                        & *{
+                            width: 100%;
+                        }
+
+                        .card-title {
+                            font-weight: 600;
+                            font-size: 24px;
+                            color: var(--azul-medio);
+                            line-height: 25px;
+                        }
+
+                        .card-subtitle {
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: var(--azul-medio);
+                            margin-bottom: 10px;
+                        }
+
+                        .card-text {
+                            font-weight: 400;
+                            font-size: 16px;
+                            color: var(--texto);
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

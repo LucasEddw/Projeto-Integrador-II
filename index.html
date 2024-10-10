@@ -122,6 +122,8 @@
 
                     <div class="blog-card-thumbnail">
 
+                        <div class="blog-card-thumbnail-img"></div>
+
                         <div class="blog-card-thumbnail-box">
 
                             <h1 class="blog-card-title">Webtoon: Modelo de <br> Quadrinhos Digital</h1>
@@ -183,6 +185,7 @@
                 <a href="#">
 
                     <div class="atividades-card-thumbnail">
+                        <div class="atividades-card-thumbnail-img"></div>
                         <h1 class="atividades-card-title">Webtoon: Modelo de quadrinhos digital</h1>
                     </div>
 
@@ -219,7 +222,14 @@
 
             <article class="quadrinhos-card">
 
-                <img class="quadrinhos-card-img" src="#" alt="livro">
+                <a href="">
+
+                    <div class="quadrinhos-card-img-box">
+
+                        <img class="quadrinhos-card-img" src="#" alt="livro">
+
+                    </div>
+                </a>
                 <div class="quadrinhos-card-info">
 
                     <h1 class="quadrinhos-card-title">Quadrinho Para o Ensino de Redes de Computador</h1>
@@ -284,7 +294,20 @@
                 blog_father.appendChild(blog_card_copy)
             }
         }
+
         multiplyBlogCard()
+
+        const banner_btn = document.querySelector('#banner-button');
+
+        banner_btn.addEventListener('click', () => {
+            let html = document.querySelector('html');
+            window.scrollTo({
+                top: window.innerHeight - 116
+            });
+        })
+
+        
+
     </script>
 
     <!-- #endregion SCRIPT-->

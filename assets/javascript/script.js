@@ -39,7 +39,7 @@ fetch('footer.html')
 
 window.addEventListener('scroll', () => {
     let nav_bar = document.querySelector('nav.nav-bar');
-    if (window.scrollY > 500) {
+    if (window.scrollY > 300) {
         nav_bar.classList.add('nav-bar-animation');
     }
     if (window.scrollY == 0 && nav_bar.classList.contains('nav-bar-animation')) {
@@ -51,12 +51,3 @@ window.addEventListener('scroll', () => {
         }, 200);
     }
 });
-
-const banner_btn = document.querySelector('#banner-button');
-
-banner_btn.addEventListener('click',()=>{
-    let html = document.querySelector('html');
-    window.scrollTo({
-        top: window.innerHeight - 116
-    });
-})
