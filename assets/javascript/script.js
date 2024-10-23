@@ -51,3 +51,15 @@ window.addEventListener('scroll', () => {
         }, 200);
     }
 });
+
+const coment_form = document.querySelector("form#coment-form");
+var conta = false;
+
+coment_form.addEventListener('submit',()=>{
+    event.preventDefault();
+    if(conta == false){
+        window.location.href = 'login.html';
+    }
+})
+
+// const name_input = document.querySelector('');

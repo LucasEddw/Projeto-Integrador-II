@@ -18,19 +18,20 @@
 
         </div>
         <ul id="static-nav-bar-box">
-
+<!-- 
             <li id="static-nav-bar-links"><a href="blog.html">Blog</a></li>
-            <li id="static-nav-bar-links"><a href="atividades.html">Atividades</a></li>
+            <li id="static-nav-bar-links"><a href="atividades.html">Atividades</a></li> -->
+            <li id="static-nav-bar-links"><a href="quadrinhos.html">Home</a></li>
             <li id="static-nav-bar-links"><a href="quadrinhos.html">Quadrinhos</a></li>
             <li id="static-nav-bar-links"><a href="sobre.html">Sobre</a></li>
 
         </ul>
-        <div id="static-nav-bar-profile-box">
+        <!-- <div id="static-nav-bar-profile-box">
 
             <i id="static-nav-bar-notification" class="fa-solid fa-bell"></i>
             <i id="static-nav-bar-profile" class="fa-solid fa-user"></i>
 
-        </div>
+        </div> -->
 
     </nav>
 
@@ -129,7 +130,7 @@
                 </div>
             </div>
         </div>
-        <div style="padding: 0;" class="default-page-search-box">
+        <!-- <div style="padding: 0;" class="default-page-search-box">
             <div class="search-box">
                 <h1 class="search-title">Pequisar Conteúdo</h1>
                 <div class="search-content">
@@ -152,7 +153,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
@@ -170,22 +171,22 @@
     </script>
 
     <script>
-        window.addEventListener('scroll', () => {
-            let search_box_content = document.querySelector('div.search-box');
-            let search_box = document.querySelector('div.default-page-search-box');
-            if (window.scrollY > 105) {
-                search_box_content.style.position = 'fixed';
-                if (window.scrollY > 1670) {
-                    search_box_content.style.position = 'static';
-                    search_box.style.alignItems = 'end';
-                }
-            }
+        // window.addEventListener('scroll', () => {
+        //     let search_box_content = document.querySelector('div.search-box');
+        //     let search_box = document.querySelector('div.default-page-search-box');
+        //     if (window.scrollY > 105) {
+        //         search_box_content.style.position = 'fixed';
+        //         if (window.scrollY > 1670) {
+        //             search_box_content.style.position = 'static';
+        //             search_box.style.alignItems = 'end';
+        //         }
+        //     }
 
-            else {
-                search_box_content.style.position = 'static';
-                search_box.style.alignItems = 'start';
-            }
-        })
+        //     else {
+        //         search_box_content.style.position = 'static';
+        //         search_box.style.alignItems = 'start';
+        //     }
+        // })
     </script>
 
     <!-- #endregion SCRIPT-->

@@ -1,0 +1,166 @@
+#quadrinhos-content-box {
+    .quadrinhos-content-text {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--texto);
+        text-align: justify;
+        margin-bottom: 10px;
+    }
+
+    .quadrinhos-content-title {
+        font-size: 32px;
+        font-weight: 600;
+        color: var(--texto-escuro);
+        text-align: justify;
+    }
+}
+
+#nocoment {
+    color: var(--azul-medio);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.coment-heart-like{
+    color: red !important;
+}
+
+#coment-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--azul-medio-5p);
+    flex-direction: column;
+    margin: 50px 0 150px 0;
+
+    #coment-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        gap: 40px;
+        min-height: 100px;
+
+
+        .coment {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+
+            .coment-user {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+
+                .coment-user-pfp {
+                    display: flex;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background: #ccc;
+                }
+
+                .coment-date {
+                    font-weight: 600;
+                    font-size: 14px;
+                    color: var(--texto-escuro);
+                }
+            }
+
+            .coment-content {
+                padding: 7px 0 0 0;
+
+                .coment-user-name {
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: var(--texto-escuro);
+                }
+
+                .coment-interact {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 20px;
+
+                    .coment-text {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: var(--texto);
+                        text-align: justify;
+                        margin: 7px 0 0 15px;
+                    }
+
+                    .coment-hearts {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        .coment-heart {
+                            font-size: 20px;
+                            margin-right: 20px;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+
+                        .coment-hearts-count {
+                            font-weight: 600;
+                            font-size: 14px;
+                            color: var(--texto-escuro);
+                            margin-right: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        border-top: 2px solid var(--azul-medio-20p);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+
+        input#coment-bar {
+            height: 60px;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: var(--azul-medio);
+            font-size: 16px;
+            padding: 25px;
+
+            &::placeholder {
+                color: var(--azul-medio);
+            }
+        }
+
+        button[type=submit] {
+            width: 47px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            border: none;
+            background: var(--azul-medio);
+            color: white;
+            transition: all 0.3s;
+
+            &:hover {
+                transition: all 0.3s;
+                cursor: pointer;
+                scale: 1.05;
+                filter: brightness(1.1);
+            }
+        }
+    }
+}

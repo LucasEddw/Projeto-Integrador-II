@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head class="adicionar-css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anima - INOS</title>
+    <link rel="stylesheet" href="assets/styles/login.css">
+</head>
+
+<body class="adicionar-nav-bar">
+
+    <nav id="static-nav-bar">
+
+        <div id="static-nav-bar-icon">
+
+            <a href="index.html">Anima - INOS</a>
+
+        </div>
+        <ul id="static-nav-bar-box">
+
+            <!-- <li id="static-nav-bar-links"><a href="blog.html">Blog</a></li>
+            <li id="static-nav-bar-links"><a href="atividades.html">Atividades</a></li> -->
+            <li id="static-nav-bar-links"><a href="index.html">Home</a></li>
+            <li id="static-nav-bar-links"><a href="quadrinhos.html">Quadrinhos</a></li>
+            <li id="static-nav-bar-links"><a href="sobre.html">Sobre</a></li>
+
+        </ul>
+        <!-- <div id="static-nav-bar-profile-box">
+
+            <i id="static-nav-bar-notification" class="fa-solid fa-bell"></i>
+            <i id="static-nav-bar-profile" class="fa-solid fa-user"></i>
+
+        </div> -->
+
+    </nav>
+
+
+    <main class="container-recuperar-senha">
+        <div class="card">
+            <div class="login-card">
+                <form id="recuperar-senha">
+                    <h1>Digite um email válido para recuperar a senha</h1>
+                    <div class="input-box">
+                        <input type="text" id="email-login" required>
+                        <label for="email-login">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Email</span>
+                        </label>
+                    </div>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- <main id="card-recuperar-senha">
+        <h1 id="card-senha-title">Digite um email válido para recuperar a sua senha</h1>
+        <div class="input-box">
+            <input type="text" id="email-login" required>
+            <label for="email-login">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </label>
+        </div>
+        <input type="submit" value="Acessar">
+    </main> -->
+
+
+    <div style="display: none;" class="repositorio"></div>
+
+    <!-- #region SCRIPT-->
+
+    <script src="assets/javascript/script.js">
+    </script>
+
+    <script>
+        const recuperar_senha = document.querySelector('form#recuperar-senha');
+        recuperar_senha.addEventListener('submit', (event) => {
+            event.preventDefault();
+            window.location.href = 'quadrinhos.html';
+        })
+    </script>
+
+    <!-- #endregion SCRIPT-->
+
+</body>
+
+</html>

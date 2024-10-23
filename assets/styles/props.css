@@ -38,8 +38,8 @@
 #static-nav-bar #static-nav-bar-box {
   list-style: none;
   position: absolute;
-  transform: translateX(calc(50vw - 76px - 50%));
   display: flex;
+  right: 76px;
   gap: 46px;
 }
 .nav-bar .nav-bar-box .nav-bar-links a,
@@ -200,15 +200,14 @@ footer.footer .footer-bottom .footer-bottom-text {
 
 .default-page {
   margin-top: 116px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 106px;
   padding: 0 120px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .default-page .default-page-main-section {
-  width: 720px;
+  width: 820px;
   grid-area: 1/1/2/2;
 }
 .default-page .default-page-main-section .page-title {
